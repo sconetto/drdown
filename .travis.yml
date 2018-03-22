@@ -15,6 +15,9 @@ language: python
 python:
   - "3.6"
 
+before_script:
+  - export DJANGO_SETTINGS_MODULE='config.settings.test'
+
 script:
   - python manage.py migrate
   - py.test
